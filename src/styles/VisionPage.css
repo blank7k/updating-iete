@@ -1,0 +1,177 @@
+/* VisionPage Specific Styles */
+.visionpage-container {
+    /* min-height: 100vh; */
+    background: transparent;
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Chivo Mono', monospace;
+}
+
+.visionpage-title {
+    font-family: 'Chivo Mono', monospace;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 15%;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    margin-left: 2.5rem;
+}
+
+.visionpage-college-image {
+    width: 16rem; /* Smaller size */
+    height: 16rem;
+    object-fit: cover;
+    border-radius: 3rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.visionpage-logo {
+    width: 5rem; /* Smaller logo */
+    height: 8rem;
+    border-radius: 70%; /* Circular shape */
+    object-fit: cover; 
+    box-shadow: 0 0 30px rgba(128, 0, 128, 0.8);
+}
+
+
+.visionpage-image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Space between image and logo */
+    margin-left: 0; /* Reset any unnecessary margins */
+}
+
+.visionpage-logo-container img {
+    box-shadow: 0 0 50px 10px rgba(128, 0, 128, 0.9);
+    border-radius: 1rem;
+}
+
+.visionpage-logo {
+    width: 15rem;
+}
+
+.visionpage-statement {
+    font-family: "Baskervville";
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: 0.10rem;
+    text-align: center;
+    color: #d1d5db;
+    max-width: 65rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+.visionpage-decorative-line {
+    position: relative;
+    background-color: #ed8936;
+}
+
+.visionpage-top-line {
+    top: 1rem;
+    left: 52%;
+    transform: translateX(-50%);
+    width: 45rem;
+    height: 0.25rem;
+}
+
+.visionpage-bottom-line {
+    top: 33.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100rem;
+    height: 0.25rem;
+    background-color: #ed8936;
+}
+
+.visionpage-events-link {
+    font-family: 'Chivo Mono', monospace;
+    font-weight: 300;
+    font-size: 20px;
+    color: #ed8936;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+.visionpage-events-link:hover {
+    text-decoration: underline;
+}
+
+.vision-btn {
+  background-color: #ff6600;
+  color: #ffffff;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 30px 0;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.vision-btn:hover {
+  background-color: #e65c00;
+}
+
+/* For Tablets and Smaller Screens */
+@media (max-width: 768px) {
+    .visionpage-title {
+      font-size: 24px;
+      margin-left: 0;
+    }
+  
+    .visionpage-image-section {
+      flex-direction: column; /* Stack vertically */
+      gap: 1rem;
+    }
+  
+    .visionpage-college-image {
+      width: 12rem; /* Smaller size */
+      height: 12rem;
+      border-radius: 2rem;
+    }
+  
+    .visionpage-logo {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 10%; 
+    }
+  
+    .visionpage-statement {
+      font-size: 14px;
+      margin-right: 0;
+      max-width: 90%;
+    }
+  }
+  
+  /* For Mobile Phones */
+  @media (max-width: 480px) {
+    .visionpage-title {
+      font-size: 24px;
+    }
+  
+    .visionpage-college-image {
+      width: 10rem;
+      height: 10rem;
+    }
+  
+    .visionpage-logo {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 10%;
+    }
+  
+    .visionpage-statement {
+      font-size: 12px;
+    }
+  }
