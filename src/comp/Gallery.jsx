@@ -15,6 +15,48 @@ const Gallery = () => {
   const [sliderImages, setSliderImages] = useState([]);
   const [events, setEvents] = useState([]);
 
+  const placeholderImg = "https://i.ibb.co/JRHnS7Kp/placeholder.jpg";
+  const manualImages = Array(5).fill(placeholderImg);
+
+  const manualEvents = [
+    {
+      title: "Research Paper Writing Seminar",
+      date: "2025-26",
+      images: manualImages,
+      redirectUrl: ""
+    },
+    {
+      title: "Mosaic 2k25",
+      date: "2025-26",
+      images: manualImages,
+      redirectUrl: ""
+    },
+    {
+      title: "MimoVerse",
+      date: "2025-26",
+      images: manualImages,
+      redirectUrl: ""
+    },
+    {
+      title: "IOT/IIOT",
+      date: "2025-26",
+      images: manualImages,
+      redirectUrl: ""
+    },
+    {
+      title: "IETE Farewell 25-26",
+      date: "2025-26",
+      images: manualImages,
+      redirectUrl: ""
+    },
+    {
+      title: "IETE Freshers 25-26",
+      date: "2025-26",
+      images: manualImages,
+      redirectUrl: ""
+    }
+  ];
+
   // Fetch event slider images
   useEffect(() => {
     sanityClient
@@ -41,7 +83,7 @@ const Gallery = () => {
           redirectUrl
         }`
       )
-      .then((data) => setEvents(data))
+      .then((data) => setEvents([...manualEvents, ...data]))
       .catch(console.error);
   }, []);
 
@@ -108,7 +150,7 @@ const Gallery = () => {
                   {event.images.map((img, imgIndex) => (
                     <Carousel.Item key={imgIndex}>
                       <motion.img
-                        src={urlFor(img.asset)}
+                        src={img.asset ? urlFor(img.asset) : img}
                         alt={event.title}
                         className="d-block w-100 event-img"
                         initial={{ opacity: 0 }}
