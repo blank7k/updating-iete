@@ -1,5 +1,6 @@
 /* Ensure no overflow */
-html, body {
+html,
+body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -10,12 +11,18 @@ html, body {
   /* background-color: #0d0d0d; */
   background: transparent;
   color: #ffffff;
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
-  padding: 20px;
   max-width: 100%;
   overflow-x: hidden;
   font-family: "Chivo Mono", sans-serif;
+
+  /* Flexbox for perfect centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* Gallery title */
@@ -29,15 +36,24 @@ html, body {
 /* Slider container */
 .slider-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
+  display: block;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  /* Force horizontal centering */
+  /* Vertical spacing */
+  overflow: hidden;
+  /* Prevent overflow during slide */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* Optional: adds depth */
 }
 
 .slider-img {
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
+  /* Fill the container */
+  height: auto;
+  object-fit: cover;
   border-radius: 10px;
 }
 
