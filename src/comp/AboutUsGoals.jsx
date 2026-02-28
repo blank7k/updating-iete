@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import sanityClient from "../sanity/sanityconfig"; // Import your Sanity client
+// import sanityClient from "../sanity/sanityconfig"; // Import your Sanity client (Removed)
 import Carousel from 'react-bootstrap/Carousel';
 import { motion } from "framer-motion"; // Import Framer Motion
 import "./AboutUsGoals.css";
@@ -7,21 +7,27 @@ import { useNavigate } from "react-router-dom";
 
 const AboutUsGoals = () => {
   const navigate = useNavigate();
-  const [images, setImages] = useState([]);
+  // Hardcoded images as per user request
+  const [images, setImages] = useState([
+    "https://i.postimg.cc/wTq0SjCq/3Z0A9163_jpg.jpg",
+    "https://i.postimg.cc/R0WfFSrN/Whats_App_Image_2026_02_18_at_2_30_55_AM.jpg",
+    "https://i.postimg.cc/fLFD1Pbr/grp2.jpg",
+    "https://i.postimg.cc/13tVCmz4/grpiete.png"
+  ]);
 
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "aboutUs"][0]{
-          images[]{asset->{url}}
-        }`
-      )
-      .then((data) => {
-        const fetchedImages = data?.images?.map((img) => img.asset.url) || [];
-        setImages(fetchedImages);
-      })
-      .catch(console.error);
-  }, []);
+  // useEffect(() => {
+  //   sanityClient
+  //     .fetch(
+  //       `*[_type == "aboutUs"][0]{
+  //         images[]{asset->{url}}
+  //       }`
+  //     )
+  //     .then((data) => {
+  //       const fetchedImages = data?.images?.map((img) => img.asset.url) || [];
+  //       setImages(fetchedImages);
+  //     })
+  //     .catch(console.error);
+  // }, []);
 
   return (
     <div className="about-us-container" id="about-us-container">
@@ -94,9 +100,9 @@ const AboutUsGoals = () => {
         To keep the students updated with technological developments in the field of Electronics
         & Telecommunication. To provide them a platform to develop their technical and managerial skills by organizing various technical events such as seminars, workshops, project competitions, and technical paper presentations.
         It offers educational programs, certifications, and conducts examinations, while also organizing conferences,
-         workshops, placement talks, and technical events. The endeavor of IETE-SFIT student Chapter is to spread awareness about state-of-the-art technologies used in industries and develop all-round skills of engineers.
+        workshops, placement talks, and technical events. The endeavor of IETE-SFIT student Chapter is to spread awareness about state-of-the-art technologies used in industries and develop all-round skills of engineers.
       </motion.p>
-{/* <motion.p
+      {/* <motion.p
         className="about-text"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +111,7 @@ const AboutUsGoals = () => {
       >
         It offers educational programs, certifications, and conducts examinations, while also organizing conferences, workshops, placement talks, and technical events. The endeavor of IETE-SFIT student Chapter is to spread awareness about state-of-the-art technologies used in industries and develop all-round skills of engineers.
       </motion.p>*/}
-      
+
 
       {/* Goals Section Animation on Scroll */}
       {/*

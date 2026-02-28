@@ -3,7 +3,7 @@ import Hero from './comp/Hero';
 import MyNavbar from './comp/MyNavbar';
 import AboutUsGoals from './comp/AboutUsGoals';
 import Gallery from './comp/Gallery';
-import TeamPage from './pages/TeamPage';
+
 import OurTeam from './pages/OurTeam';
 import ContactForm from './components/ContactForm';
 import VisionPage from './components/VisionPage';
@@ -26,7 +26,7 @@ function App() {
                                 <Hero />
                                 <EventsPage />
                                 <AboutUsGoals />
-                                <TeamPage />
+
                                 <VisionPage />
 
                                 {/* <ContactForm /> */}

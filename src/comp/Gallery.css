@@ -50,11 +50,13 @@ body {
 }
 
 .slider-img {
-  width: 100%;
+  width: 100% !important;
   /* Fill the container */
   height: auto;
   object-fit: cover;
   border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Slider buttons */

@@ -28,7 +28,7 @@ function MyNavbar() {
             navbarScroll
           >
             <Nav.Link href="/#about-us-container">About Us</Nav.Link>
-            <Nav.Link href="/gallery#event-gallery">Events</Nav.Link>
+
             <Nav.Link
               href="https://www.sfit.ac.in"
               target="_blank"

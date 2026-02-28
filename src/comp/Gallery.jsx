@@ -12,7 +12,20 @@ const builder = imageUrlBuilder(sanityClient);
 const urlFor = (source) => builder.image(source).url();
 
 const Gallery = () => {
-  const [sliderImages, setSliderImages] = useState([]);
+  // Manual slider images from user
+  const manualSliderImages = [
+    "https://i.postimg.cc/2zqGs36h/IMG-6225-JPG.jpg",
+    "https://i.postimg.cc/ChkNKtbn/IMG-6209.avif",
+    "https://i.postimg.cc/W2D8Bt3r/IMG-6121-JPG.jpg",
+    "https://i.postimg.cc/KZdfxFkw/IMG-6255.avif",
+    "https://i.postimg.cc/9mZpfSyX/IMG-20251017-171502-jpg.jpg",
+    "https://i.postimg.cc/W2D8Bt3r/IMG-6121-JPG.jpg",
+    "https://i.postimg.cc/fw6CDZSN/IMG-20251017-122750-jpg.jpg",
+    "https://i.postimg.cc/1mwHzTwT/IMG-6795.avif",
+    "https://i.postimg.cc/pWzZd7z4/IMG-7028.avif"
+  ];
+
+  const [sliderImages, setSliderImages] = useState(manualSliderImages);
   const [events, setEvents] = useState([]);
 
   const placeholderImg = "https://i.ibb.co/JRHnS7Kp/placeholder.jpg";
@@ -95,7 +108,8 @@ const Gallery = () => {
     }
   ];
 
-  // Fetch event slider images
+  // Fetch event slider images - DISABLED to use manual list
+  /*
   useEffect(() => {
     sanityClient
       .fetch(
@@ -109,6 +123,7 @@ const Gallery = () => {
       })
       .catch(console.error);
   }, []);
+  */
 
   // Fetch event gallery details
   useEffect(() => {
@@ -220,6 +235,29 @@ const Gallery = () => {
           <p>Loading events...</p>
         )}
       </motion.div>
+
+      {/* Main Slider using Bootstrap Carousel (Bottom) */}
+      <div className="slider-container" style={{ marginTop: '40px' }}>
+        {sliderImages.length > 0 ? (
+          <Carousel>
+            {sliderImages.map((img, index) => (
+              <Carousel.Item key={index}>
+                <motion.img
+                  src={img}
+                  alt={`Slide ${index}`}
+                  className="d-block w-100 slider-img"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 1 }}
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        ) : (
+          <p>Loading images...</p>
+        )}
+      </div>
     </div>
   );
 };
