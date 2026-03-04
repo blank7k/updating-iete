@@ -38,7 +38,7 @@ const TeamPage = () => {
       category: "Public Relations",
       categoryOrder: 4,
       members: [
-        { name: "Krishika Ganiga(PR Head)", position: "Public Relations Head", image: "https://i.postimg.cc/KvLGcQCN/IMG_2713_JPG.jpg", size: "medium" },
+        { name: "Krishika Ganiga(PR Head)", position: "Public Relations Head", image: "https://i.postimg.cc/qB6PN4Vf/fina-L-PIC.jpg", size: "large" },
         { name: "Palak Sodhani(Exec)", position: "Member", image: "https://i.postimg.cc/Xv8bcQTg/DSC05322.jpg", size: "medium" },
         { name: "Shantala Purav(Exec)", position: "Member", image: "https://i.postimg.cc/pXGGGRpg/DSC05323.jpg", size: "medium" },
         { name: "Sarthak Pawar(Exec)", position: "Member", image: "https://i.postimg.cc/NMmRz2k4/IMG_20250904_WA0052.jpg", size: "medium" },

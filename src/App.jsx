@@ -24,8 +24,8 @@ function App() {
                             <>
                                 <MyNavbar />
                                 <Hero />
-                                <EventsPage />
                                 <AboutUsGoals />
+                                <EventsPage />
 
                                 <VisionPage />
 
