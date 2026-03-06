@@ -49,10 +49,23 @@ const Gallery = () => {
       description:
         "An event where students explored metaverse concepts and digital interaction technologies.",
       images: [
-        "https://i.postimg.cc/mTfm3rts/Screenshot-(133).png",
-        "https://i.postimg.cc/6BJMVQyt/Screenshot-(134).png"
+        "https://i.postimg.cc/mTfm3rts/Screenshot-%28133%29.png",
+        "https://i.postimg.cc/6BJMVQyt/Screenshot-%28134%29.png"
       ]
-    }
+    },
+    {
+      title: "IOT/IIOT",
+      date: "2025-26",
+      description:
+        "An event where students explored metaverse concepts and digital interaction technologies.",
+      images: [
+        "https://i.postimg.cc/6qVJNRL9/IMG_6219.avif",
+        "https://i.postimg.cc/g05PyG2c/IMG_20251001_WA0089.jpg",
+        "https://i.postimg.cc/SK5pLmxS/IMG_20251001_WA0119.jpg",
+        "https://i.postimg.cc/nrKbt7Yn/IMG_6244.avif",
+        "https://i.postimg.cc/5tGM5f2x/IMG_20251001_WA0081.jpg",
+      ]
+    },
   ];
 
   useEffect(() => {

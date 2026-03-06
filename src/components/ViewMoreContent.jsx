@@ -5,7 +5,7 @@ const ViewMoreContent = ({ title }) => {
     
    "Power-BI-Play":
     "Power-BI-Play was an interactive workshop focused on mastering Microsoft Power BI for data visualization and business intelligence, teaching students how to create insightful dashboards and reports.",
-    
+
     "Research Paper Writing Seminar":
       "This seminar focused on guiding students through the process of writing high-quality research papers. Experts explained research methodology, literature review techniques, and publishing opportunities.",
 
