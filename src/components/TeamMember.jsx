@@ -1,12 +1,12 @@
-const TeamMember = ({ name, image, size }) => {
-  const circleSize = size === "large" ? "100px" : "90px";
+const TeamMember = ({ name, image }) => {
+  const circleSize = "160px";
 
   const containerStyle = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     textAlign: "center",
-    margin: "10px",
+    margin: "15px",
   };
 
   const circleStyle = {
@@ -21,8 +21,8 @@ const TeamMember = ({ name, image, size }) => {
   };
 
   const nameStyle = {
-    marginTop: "8px",
-    fontSize: "12px",
+    marginTop: "12px",
+    fontSize: "14px",
     color: "white",
     fontFamily: "monospace",
   };
@@ -31,24 +31,6 @@ const TeamMember = ({ name, image, size }) => {
     <div style={containerStyle}>
       <div style={circleStyle}></div>
       <p style={nameStyle}>{name}</p>
-    </div>
-  );
-};
-const TeamContainer = ({ members }) => {
-  const containerStyle = {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    gap: "20px",
-    padding: "20px",
-    flexDirection: "row",
-  };
-
-  return (
-    <div style={containerStyle}>
-      {members.map((member, index) => (
-        <TeamMember key={index} {...member} />
-      ))}
     </div>
   );
 };

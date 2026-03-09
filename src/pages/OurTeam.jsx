@@ -20,7 +20,7 @@ const OurTeam = () => {
             category: "Core Team",
             categoryOrder: 2,
             members: [
-                { name: "Purva Daundkar(Chairperson)", position: "Chairperson", image: "https://i.postimg.cc/TPZr0Jgt/IMG_20250904_WA0042.jpg", size: "medium" },
+                { name: "Purva Daundkar(Chairperson)", position: "Chairperson", image: "https://i.postimg.cc/SNwY6vKm/purva.jpg", size: "medium" },
                 { name: "Tanishka Karlekar(Vice Chairperson)", position: "Vice Chairperson", image: "https://i.postimg.cc/tTWFMnNk/IMG_20250904_WA0068.jpg", size: "medium" },
                 { name: "Siddhesh Gupta(Secretary)", position: "Secretary", image: "https://i.postimg.cc/4dVpSHQS/IMG_20250904_WA0074.jpg", size: "medium" },
                 { name: "Harshit Kawa(Treasurer)", position: "Treasurer", image: "https://i.postimg.cc/7LTBq6N3/IMG_20250904_WA0014.jpg", size: "medium" },
